@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loaderSection.classList.add("active");
 
   window.addEventListener("load", function () {
-    loaderSection.classList.remove("active");
+    setTimeout(() => {
+      loaderSection.classList.remove("active");
+    }, 500); // Añade un retraso de 500ms
   });
 });
