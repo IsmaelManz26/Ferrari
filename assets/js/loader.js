@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     setTimeout(() => {
       loaderSection.classList.remove("active");
-    }, 500); // Añade un retraso de 500ms
+    }, 1000);
   });
 });
