@@ -43,6 +43,9 @@ button {
   background-color: var(--ferrari-red);
   color: var(--ferrari-white);
 }
+.logo-svg:hover {
+  fill: var(--ferrari-red);
+}
 /* Fonts */
 @font-face {
   font-family: "Ferrari-Medium";

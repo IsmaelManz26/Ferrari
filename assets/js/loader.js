@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     setTimeout(() => {
       loaderSection.classList.remove("active");
-    }, 1000);
+    }, 500);
   });
 });

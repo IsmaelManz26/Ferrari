@@ -302,3 +302,84 @@ header.menu-open .menu-on-nav li a:hover {
   color: var(--ferrari-white);
   text-transform: uppercase;
 }
+
+/* ----------- Innovación y Rendimiento --------------- */
+.performance-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.performance-container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.performance-row {
+  display: flex;
+  justify-content: space-between;
+}
+.performance-row.reverse .performance-text {
+  padding-left: 2rem;
+}
+.performance-text {
+  width: 50%;
+  color: var(--ferrari-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.performance-title {
+  color: var(--ferrari-red);
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.performance-subtitle {
+  font-size: 1.2rem;
+  color: var(--ferrari-white);
+  margin-bottom: 2.5rem;
+}
+.performance-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.performance-image {
+  width: 50%;
+  position: relative;
+}
+.performance-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.performance-button {
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ferrari-dark-gray);
+  color: var(--ferrari-white);
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.performance-button i {
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+.performance-button:hover {
+  background-color: var(--ferrari-red);
+  color: var(--ferrari-black);
+  transform: scale(1.05);
+}
+.performance-button:hover i {
+  transform: translateX(5px);
+}
