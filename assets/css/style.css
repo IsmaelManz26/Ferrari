@@ -500,3 +500,95 @@ header.menu-open .menu-on-nav li a:hover {
 }
 @media (max-width: 500px) {
 }
+
+/* ----------------- SECCION NEWS FERRARI ---------------------- */
+.news-section {
+  width: 100%;
+  padding-top: 4rem;
+}
+.news-container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.news-banner {
+  width: 100%;
+  position: relative;
+  background: url("../imgs/news/hero-news.avif") no-repeat center center;
+  background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 9rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.news-title {
+  color: var(--ferrari-red);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.news-subtitle {
+  color: white;
+  font-size: 1.5rem;
+}
+.news-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 9rem;
+  gap: 2rem;
+}
+.news-item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.news-image {
+  width: 50%;
+  padding-right: 1rem;
+}
+.news-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.news-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.news-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.news-item-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Ferrari-Medium", sans-serif;
+}
+.news-content > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+.news-category,
+.news-date {
+  font-size: 1.2rem;
+  color: gray;
+}
+.news-category,
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.news-description {
+  font-size: 1rem;
+  color: var(--ferrari-white);
+}
