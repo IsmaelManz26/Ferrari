@@ -1,4 +1,4 @@
-// GSARP
+// GSARP INDEX
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 

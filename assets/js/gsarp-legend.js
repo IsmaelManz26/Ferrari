@@ -1,3 +1,4 @@
+// GSARP LEGEND
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -71,6 +72,27 @@ document.addEventListener("DOMContentLoaded", function () {
           toggleActions: "play none none none",
         },
         delay: index * 0.3,
+      }
+    );
+  });
+
+  // Animación para la sección de pilotos legendarios
+  const driverCards = gsap.utils.toArray(".driver-card");
+  driverCards.forEach((card, index) => {
+    gsap.fromTo(
+      card,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+        delay: index * 0.3, // Retraso progresivo
       }
     );
   });
