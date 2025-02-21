@@ -57,13 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Animación para la sección de colaboraciones
   const collaborationCards = gsap.utils.toArray(".collaboration-card");
   collaborationCards.forEach((card, index) => {
-    const direction = index % 2 === 0 ? -100 : 100; // Alternar dirección
     gsap.fromTo(
       card,
-      { opacity: 0, x: direction },
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
-        x: 0,
+        y: 0,
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
@@ -71,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-        delay: Math.floor(index / 2) * 0.2,
+        delay: index * 0.3,
       }
     );
   });

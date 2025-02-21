@@ -349,8 +349,8 @@ header.menu-open .menu-on-nav li a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--ferrari-dark-gray);
-  color: var(--ferrari-white);
+  background-color: var(--ferrari-light-gray);
+  color: var(--ferrari-black);
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -361,8 +361,11 @@ header.menu-open .menu-on-nav li a:hover {
 }
 .collaboration-button:hover {
   background-color: var(--ferrari-red);
-  color: var(--ferrari-black);
+  color: var(--ferrari-white);
   transform: scale(1.05);
+}
+.collaboration-button i {
+  margin-left: 1rem;
 }
 
 /* -------------- PILOTOS LEGENDARIOS ----------------- */
@@ -420,6 +423,13 @@ header.menu-open .menu-on-nav li a:hover {
 .driver-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+/* iconos logro */
+.driver-card .driver-name:after {
+  content: "\f091";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 10px;
 }
 .driver-img {
   width: 100%;

@@ -57,33 +57,33 @@
 .slider__content .tags__text .divider--grey {
   color: #727272;
 }
-.route__kilometer p {
+.legend__kilometer p {
   font-size: 1.5rem;
   line-height: normal;
 }
-.route__info {
+.legend__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
 }
-.route__location p {
+.legend__location p {
   font-size: 1rem;
 }
-.route__map img {
+.legend__map img {
   width: 85px;
 }
-.route__content {
+.legend__content {
   margin-top: 100px;
   margin-bottom: 50px;
 }
-.route__content p {
+.legend__content p {
   margin-bottom: 1rem;
 }
-.route__content p:last-child {
+.legend__content p:last-child {
   margin-bottom: 0;
 }
-.route__description {
+.legend__description {
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
