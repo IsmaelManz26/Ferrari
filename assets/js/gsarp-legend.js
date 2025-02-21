@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-        delay: index * 0.2, // Retraso para que los elementos aparezcan uno tras otro
+        delay: index * 0.2,
       }
     );
   });
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-        delay: index * 0.3, // Retraso progresivo
+        delay: index * 0.3,
       }
     );
   });

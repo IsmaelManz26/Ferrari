@@ -288,6 +288,11 @@ header.menu-open .menu-on-nav li a:hover {
   color: var(--ferrari-white);
 }
 
+/* SLIDER */
+.slider__content .section-subtitle {
+  color: var(--ferrari-red) !important;
+}
+
 /* ---------------------------- FERRARI COLABORACIONES ------------------------ */
 /* Estilos generales para la sección */
 .collaboration-card-slider {
