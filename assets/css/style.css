@@ -611,6 +611,15 @@ header.menu-open .menu-on-nav li a:hover {
   .performance-section {
     padding: 4rem 4rem;
   }
+  .masonry-section {
+    padding: 4rem 4rem;
+  }
+  .news-banner {
+    padding-left: 4rem;
+  }
+  .news-list {
+    padding: 4rem 4rem;
+  }
 }
 @media screen and (max-width: 960px) {
   .intro-content-container {
@@ -631,10 +640,56 @@ header.menu-open .menu-on-nav li a:hover {
   .performance-image {
     width: 100%;
   }
+  .performance-row:nth-of-type(1) .performance-text,
+  .performance-row:nth-of-type(3) .performance-text {
+    padding-right: 0;
+  }
+  .performance-description {
+    margin-bottom: 2rem;
+  }
+  .performance-button {
+    width: 100%;
+  }
+  .performance-row.reverse {
+    flex-direction: column-reverse;
+  }
+  .performance-row.reverse .performance-text {
+    padding-left: 0;
+  }
+  .performance-container {
+    gap: 4rem;
+  }
+  .news-item {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .news-image,
+  .news-content {
+    width: 100%;
+  }
+  .news-title {
+    font-size: 2rem;
+  }
+  .news-subtitle {
+    font-size: 1rem;
+  }
+  .masonry-header h2 {
+    margin-bottom: 0;
+  }
+  .news-image {
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 700px) {
   .quote {
     font-size: 1.2rem;
+  }
+  .news-category,
+  .news-date {
+    font-size: 1rem;
+  }
+  .news-item-title {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 500px) {
