@@ -598,3 +598,50 @@ header.menu-open .menu-on-nav li a:hover {
 }
 
 /* ----------- MEDIA QUERY ------------------ */
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+  .intro-section {
+    padding: 4rem 4rem;
+  }
+  .intro-content,
+  .intro-img-1 {
+    width: 50%;
+  }
+  .performance-section {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .intro-content-container {
+    flex-direction: column;
+  }
+  .intro-content,
+  .intro-img-1 {
+    width: 100%;
+  }
+  .essence-title {
+    font-size: 2rem;
+  }
+  .performance-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .performance-text,
+  .performance-image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .quote {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro-section {
+    padding: 4rem 2rem;
+  }
+  .essence-title {
+    font-size: 1.5rem;
+  }
+}
