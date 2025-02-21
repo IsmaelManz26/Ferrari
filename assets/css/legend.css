@@ -1,0 +1,522 @@
+/*--------- HEADER -------*/
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  /* backdrop-filter: blur(4px); */
+  animation: stickyNav 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range-start: 100vh;
+  animation-range-end: 200vh;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 10;
+}
+.logo-svg {
+  width: 40px;
+  height: auto;
+  fill: white;
+}
+/* .logo {
+    width: 50px;
+    background-image: url(../imgs/logo-corazon.webp);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 50px;
+  } */
+.logo-link {
+  flex: 1;
+  display: inline-block;
+  padding-left: 1rem;
+}
+.main-nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* NAV Sin fondo y 90 con fondo */
+header {
+  background-color: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+.menu-on {
+  width: max(600px, 50%);
+}
+.menu-on-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.menu-on-nav li a {
+  font-size: 1.1rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Ferrari-Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+/* Hover: Subrayado dorado y ligero zoom */
+.menu-on-nav li a:hover {
+  transform: scale(1.05);
+}
+.menu-on-nav li a:hover::after,
+.menu-on-nav li a.active::after {
+  width: 100%;
+}
+/* Menú abierto: Mantener color dorado
+    header.menu-open .menu-on-nav li a {
+      color: var(--champagne);
+    } */
+header.menu-open .menu-on-nav li a:hover {
+  color: var(--a--hover);
+  font-weight: 400;
+}
+.nav-bar {
+  display: none;
+}
+.highlight {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+.nav-svg {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .nav-svg {
+    display: none;
+  }
+}
+.fa-location-dot {
+  width: 18px;
+  height: auto;
+  margin-left: 8px;
+  display: inline-block;
+}
+/* FONDO */
+.hero-section {
+  position: relative;
+  z-index: 0;
+  padding-top: 100px;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(60vh - 100px);
+}
+.hero-image {
+  width: 100%;
+  height: 60vh;
+  background-image: url("../imgs/modelos-legendarios/Ferrari250GTO.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero-content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phrase-hero {
+  color: var(--ferrari-white);
+  z-index: 1;
+}
+.phrase-hero h1 {
+  text-align: center;
+  font-size: 8rem;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ferrari-white);
+  /* text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); */
+  /* -webkit-text-stroke: 2px white; */
+}
+.phrase-hero h1 .outline {
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+.phrase-hero h1 span:not(.outline) {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Para asegurar que la imagen del fondo no se vea afectada por el nav */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------- SECCION ENZO FERRARI ----------------- */
+.enzo-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.enzo-container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  gap: 2rem;
+}
+.enzo-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.enzo-title {
+  margin-bottom: 2rem;
+}
+.enzo-bio {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.enzo-quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  border-left: 4px solid var(--ferrari-red);
+  padding-left: 1rem;
+}
+.enzo-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enzo-image img {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.enzo-image img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* -------------- SECCION TIMELINE FERRARI ----------------- */
+.timeline-section {
+  width: 100%;
+  padding: 4rem 9rem;
+  position: relative;
+}
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.timeline-line {
+  width: 3px;
+  background-color: var(--ferrari-white);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 5%;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.timeline-date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ferrari-white);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--ferrari-red);
+  border-radius: 50%;
+  border: 2px solid var(--ferrari-red);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.timeline-content {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--ferrari-dark-gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  text-align: center;
+}
+.timeline-content h3,
+.timeline-content p {
+  width: 50%;
+  color: var(--ferrari-white);
+}
+
+/* ---------------------------- FERRARI COLABORACIONES ------------------------ */
+/* Estilos generales para la sección */
+.collaboration-card-slider {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.collaboration-card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.collaboration-title {
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.collaboration-row {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2rem;
+}
+.collaboration-card {
+  width: 48%;
+  background-color: var(--ferrari-dark-gray);
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collaboration-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.collaboration-card h4 {
+  color: var(--ferrari-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.collaboration-card p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--ferrari-white);
+}
+.collaboration-card:hover {
+  transform: translateY(-10px);
+}
+.collaboration-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ferrari-dark-gray);
+  color: var(--ferrari-white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+.collaboration-button:hover {
+  background-color: var(--ferrari-red);
+  color: var(--ferrari-black);
+  transform: scale(1.05);
+}
+
+/* -------------- PILOTOS LEGENDARIOS ----------------- */
+.legendary-drivers-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.legendary-drivers-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  text-align: left;
+  font-weight: bold;
+
+  margin-bottom: 2rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+.drivers-grid {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.driver-card {
+  width: 23%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ferrari-dark-gray);
+  padding: 1.5rem;
+
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.driver-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.driver-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.driver-name {
+  font-size: 1.5rem;
+  color: var(--ferrari-red);
+  font-weight: bold;
+}
+.driver-description {
+  font-size: 1rem;
+  color: var(--ferrari-white);
+  margin-top: 1rem;
+}
+
+.driver-description .bold-yellow {
+  font-weight: bold;
+  color: #f5b500;
+}
+
+/* ------------ MEDIA QUERY LEGEND --------------------  */
+@media screen and (max-width: 1400px) {
+  .enzo-section {
+    padding: 4rem 4rem;
+  }
+  .collaboration-card-slider {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .enzo-section {
+    padding: 4rem 9rem;
+  }
+  .enzo-container {
+    flex-direction: column;
+  }
+  .legendary-drivers-section {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .hero-content {
+    transform: translateY(-100px);
+  }
+  .hero-image {
+    background-position: center center;
+  }
+  .enzo-section {
+    padding: 4rem 4rem;
+  }
+  .timeline-section {
+    padding: 4rem 4rem;
+  }
+  .timeline-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .timeline-content h3,
+  .timeline-content p {
+    width: 100%;
+  }
+  .collaboration-row {
+    flex-direction: column;
+  }
+  .collaboration-card {
+    width: 100%;
+  }
+  .drivers-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .driver-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .phrase-hero h1 {
+    font-size: 6rem;
+  }
+  .enzo-quote {
+    font-size: 1.2rem;
+  }
+  .enzo-bio {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .phrase-hero h1 {
+    font-size: 4rem;
+  }
+
+  /* Disminuir el tamaño del stroke */
+  .phrase-hero h1 .outline {
+    -webkit-text-stroke-width: 2px;
+  }
+}

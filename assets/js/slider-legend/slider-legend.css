@@ -1,0 +1,302 @@
+.container-large {
+  flex: 1;
+  width: 100%;
+  max-width: 1660px;
+  align-self: end;
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0 auto;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.mt-8 {
+  margin-top: 8rem;
+}
+
+/* SLIDER ROUTES */
+.legends {
+  --legends-light-text-color: #bbbbbb;
+}
+.legends .section-title {
+  margin-bottom: 50px;
+}
+.legends .section-subtitle {
+  padding-right: 5%;
+}
+.legends .section-smalltitle {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 50px;
+  letter-spacing: 0.1rem;
+}
+.section-smalltitle-home {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.glide__slide {
+  display: flex;
+}
+.slider__content {
+  padding: 70px 50px 100px 70px;
+  flex: 0 830px;
+  height: 100%;
+  background-color: var(--ferrari-dark-gray);
+  color: white;
+}
+.slider__content .section-subtitle {
+  line-height: 2.5rem;
+  font-size: 2rem;
+}
+.slider__content .tags__text {
+  font-size: 13px;
+  color: var(--legends-light-text-color);
+  line-height: 2rem;
+  margin: 0;
+}
+.slider__content .tags__text .divider--grey {
+  color: #727272;
+}
+.route__kilometer p {
+  font-size: 1.5rem;
+  line-height: normal;
+}
+.route__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+.route__location p {
+  font-size: 1rem;
+}
+.route__map img {
+  width: 85px;
+}
+.route__content {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.route__content p {
+  margin-bottom: 1rem;
+}
+.route__content p:last-child {
+  margin-bottom: 0;
+}
+.route__description {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.slider__image {
+  flex: 7;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.first-home {
+  margin-bottom: 100px;
+}
+
+.first-home .slider-1 .slider__image {
+  background-image: url("../../imgs/slider/hero-slider.jpg");
+}
+.first-home .slider-2 .slider__image {
+  background-image: url("../../imgs/slider/1-slider.jpg");
+}
+.first-home .slider-3 .slider__image {
+  background-image: url("../../imgs/slider/f40.webp");
+}
+.first-home .slider-4 .slider__image {
+  background-image: url("../../imgs/slider/Ferrari-Enzo.webp");
+}
+
+/* GLIDE ROUTES */
+.glide__arrow {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+.glide__arrow--left svg {
+  transform: scaleX(-1);
+}
+.glide__arrow svg {
+  fill: #000;
+  height: 1.2em;
+  width: 1.2em;
+}
+.glide__arrow--left {
+  left: 1rem;
+}
+.glide__arrow--right {
+  right: 1em;
+}
+.glide__bullets {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+}
+.glide__bullets {
+  position: absolute;
+  width: 500px;
+  bottom: 75px;
+  left: 115px;
+}
+.glide__bullet {
+  position: relative;
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  background: white;
+  width: 10px;
+  height: 10px;
+  /* margin: 0 20px; */
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+.glide__bullets::before {
+  content: "";
+  display: block;
+  width: 99%;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 5px;
+}
+.glide__bullet::after {
+  left: -12px;
+  position: absolute;
+  bottom: -35px;
+  width: 50px;
+}
+.glide__bullet:first-child::after {
+  content: "Intro";
+}
+.glide__bullet:nth-child(2)::after {
+  content: "Day 1";
+}
+.glide__bullet:nth-child(3)::after {
+  content: "Day 2";
+}
+.glide__bullet:nth-child(4)::after {
+  content: "Day 3";
+}
+.glide__bullet:nth-child(5)::after {
+  content: "Day 4";
+}
+.glide__bullet:nth-child(6)::after {
+  content: "Day 5";
+}
+.glide__bullet:nth-child(7)::after {
+  content: "Day 6";
+}
+.glide__bullet:nth-child(8)::after {
+  content: "Day 7";
+}
+.glide__bullet:hover,
+.glide__bullet:focus,
+.glide__bullet.glide__bullet--active {
+  background: #0193de;
+}
+.glide__bullet-home:first-child::after {
+  content: "Ferrari";
+}
+.glide__bullet-home:nth-child(2)::after {
+  content: "250 GTO";
+}
+.glide__bullet-home:nth-child(3)::after {
+  content: "F40";
+}
+.glide__bullet-home:nth-child(4)::after {
+  content: "Enzo";
+}
+.glide__bullet-home::after {
+  left: -40px;
+  position: absolute;
+  bottom: -35px;
+  width: 100px;
+}
+
+.glide__slide {
+  height: auto;
+}
+.mt-8 {
+  margin-top: 0 !important;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .glide__slide {
+    flex-direction: column-reverse;
+  }
+  .slider__image {
+    height: 500px;
+    flex: none;
+  }
+  .slider__content {
+    height: 50%;
+    flex: none;
+  }
+  .glide__bullets {
+    left: 0;
+    right: 0;
+    bottom: 55px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 768px) {
+  .legends {
+    padding-inline: 0;
+  }
+  .legends .section-title {
+    padding-inline: 5%;
+  }
+  .glide__bullets {
+    width: 80%;
+  }
+  .slider__content {
+    padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .first-home {
+    margin-bottom: 2rem;
+  }
+  .slider__content {
+    padding: 70px 50px 250px 70px;
+  }
+  .glide__bullets {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slider__content {
+    padding-bottom: 220px;
+  }
+}

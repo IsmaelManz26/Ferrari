@@ -25,14 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // NAV HASTA LOS 60VH
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
+  const scrollHeight = parseFloat(header.getAttribute("data-scroll-height"));
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > window.innerHeight * 0.6) {
-      header.style.backgroundColor = "var(--ferrari-black)";
-    } else {
-      header.style.backgroundColor = "transparent";
-    }
-  });
+  // Si el valor de scrollHeight es 0, activa el fondo del header inmediatamente
+  if (scrollHeight === 0) {
+    header.style.backgroundColor = "var(--ferrari-black)";
+  } else {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > window.innerHeight * scrollHeight) {
+        header.style.backgroundColor = "var(--ferrari-black)";
+      } else {
+        header.style.backgroundColor = "transparent";
+      }
+    });
+  }
 });
 
 // CTA DEL NAV ACTIVO

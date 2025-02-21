@@ -136,7 +136,7 @@
     animation-range-end: 200vh;
   }
   header.menu-open {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--ferrari-black) !important;
   }
 
   .nav-bar {

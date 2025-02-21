@@ -18,6 +18,9 @@
 .yellow-text {
   color: var(--ferrari-yellow);
 }
+.black-text {
+  color: var(--ferrari-black);
+}
 .bold {
   font-weight: bold;
 }
@@ -36,6 +39,15 @@ h2,
 h3 {
   font-family: "Ferrari-Medium", sans-serif;
   color: var(--ferrari-red);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 a {
   color: var(--ferrari-yellow);
@@ -173,6 +185,10 @@ button {
   background-color: var(--ferrari-yellow);
   transform: scale(1.05);
 }
+.footer-suscribete p,
+.footer-suscribete h2 {
+  text-align: center;
+}
 .footer-content {
   width: 100%;
   height: auto;
@@ -249,12 +265,26 @@ button {
   }
 }
 @media screen and (max-width: 700px) {
-  .footer-suscribete p {
-    text-align: center;
-  }
   .footer-container {
     padding: 4rem 2rem;
   }
+  .footer-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer-pages,
+  .footer-rrss,
+  .footer-contact {
+    align-items: center;
+  }
+  .footer-pages ul,
+  .footer-rrss ul,
+  .footer-contact ul {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 500px) {
+  .footer-container {
+    padding: 2rem 2rem;
+  }
 }
