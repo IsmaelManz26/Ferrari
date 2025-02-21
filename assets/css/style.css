@@ -421,9 +421,13 @@ header.menu-open .menu-on-nav li a:hover {
   gap: 1.5rem;
 }
 .masonry-item {
-  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  visibility: hidden;
+  /* position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 10px; */
 }
 .masonry-item img {
   width: 100%;
@@ -592,3 +596,5 @@ header.menu-open .menu-on-nav li a:hover {
   font-size: 1rem;
   color: var(--ferrari-white);
 }
+
+/* ----------- MEDIA QUERY ------------------ */
