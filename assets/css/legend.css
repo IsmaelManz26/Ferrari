@@ -458,6 +458,47 @@ header.menu-open .menu-on-nav li a:hover {
   color: #f5b500;
 }
 
+/* FOTO 100% FULL WITDH */
+.fullwidth-image-section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+.image-text h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.image-text p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
 /* ------------ MEDIA QUERY LEGEND --------------------  */
 @media screen and (max-width: 1400px) {
   .enzo-section {

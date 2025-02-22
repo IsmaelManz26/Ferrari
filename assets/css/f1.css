@@ -157,7 +157,7 @@ header.menu-open .menu-on-nav li a:hover {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--ferrari-white);
   /* text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); */
   /* -webkit-text-stroke: 2px white; */
@@ -182,14 +182,534 @@ header.menu-open .menu-on-nav li a:hover {
   width: 100%;
   height: 100%;
 }
+
+/* Estilos para la intro de F1 */
+/* Sección de introducción F1 */
+.f1-intro-section {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+.f1-intro-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.f1-intro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+}
+.f1-intro-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+.f1-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeInDown 1.2s ease-out;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9),
+    0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+.f1-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeInUp 1.5s ease-out;
+  font-weight: 300;
+  background: var(--ferrari-red);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+}
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sección de historia F1 */
+.f1-history-section {
+  width: 100%;
+  height: auto;
+
+  padding: 4rem 9rem;
+}
+.f1-history-container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+.f1-section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.f1-section-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.history-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.history-block.reverse {
+  flex-direction: row-reverse;
+}
+.history-text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.history-year {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--ferrari-yellow);
+  display: block;
+  margin-bottom: 10px;
+}
+.history-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.history-text p {
+  font-size: 1.2rem;
+}
+.history-image {
+  width: 50%;
+}
+.history-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px var(--ferrari-red);
+}
+.history-block {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+.history-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Botones de historia */
+.history-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ferrari-red);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.history-btn:hover {
+  background-color: var(--ferrari-red);
+  transform: scale(1.1);
+  color: var(--ferrari-black);
+}
+.history-btn i {
+  margin-right: 0.5rem;
+}
+
+/* Sección de coches icónicos F1 */
+.f1-iconic-cars-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.f1-iconic-cars-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.f1-iconic-cars-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.f1-iconic-cars-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+.iconic-cars-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.car-item {
+  width: 30%;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.car-item .car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+.car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.car-item:hover .car-img {
+  transform: scale(1.1);
+}
+.car-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.car-item:hover .car-info {
+  opacity: 1;
+}
+.car-info h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.car-info p {
+  font-size: 1.1rem;
+}
+
+/* Sección de pilotos Ferrari */
+.f1-pilots-section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 9rem;
+}
+.f1-pilots-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.f1-pilots-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.f1-pilots-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pilots-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.pilots-gallery-2 {
+  justify-content: space-around;
+}
+.pilot-item {
+  width: 30%;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.pilot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.pilot-item:hover .pilot-img {
+  transform: scale(1.1);
+}
+.pilot-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.pilot-item:hover .pilot-info {
+  opacity: 1;
+}
+.pilot-info h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.pilot-info p {
+  font-size: 1.1rem;
+}
+
+/* Sección de Títulos de Campeonatos */
+.f1-titles-section {
+  width: 100%;
+  padding: 4rem 9rem;
+  position: relative;
+}
+.f1-titles-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.f1-titles-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--ferrari-red);
+  margin-bottom: 1.5rem;
+}
+.f1-titles-subtitle {
+  font-size: 1.5rem;
+  color: var(--ferrari-white);
+  margin-bottom: 3rem;
+}
+.championship-titles {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.title-group {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.title-group h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ferrari-red);
+}
+.title-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.title-icon {
+  font-size: 3rem;
+  color: var(--ferrari-red);
+  margin-right: 1rem;
+}
+.title-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.title-info h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.title-info p {
+  font-size: 1.2rem;
+  color: #555;
+}
+.title-item:hover .title-icon {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+.title-item:hover .title-info {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 /* ------------ MEDIA QUERY F1 --------------------  */
 @media screen and (max-width: 1400px) {
+  .f1-history-section {
+    padding: 4rem 4rem;
+  }
+  .pilots-gallery,
+  .iconic-cars-gallery {
+    flex-direction: column;
+  }
+  .pilot-item,
+  .car-item {
+    width: 100%;
+  }
+  .car-info h3 {
+    font-size: 1.4rem;
+  }
+  .car-info p {
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 1200px) {
+  .history-block.visible {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+  .f1-history-section,
+  .f1-iconic-cars-section,
+  .f1-pilots-section {
+    padding: 4rem 6rem;
+  }
+  .history-text,
+  .history-image {
+    width: 100%;
+  }
+  .f1-title,
+  .f1-intro-text {
+    width: 100%;
+  }
+  .f1-subtitle {
+    width: 80%;
+  }
+  .history-block.reverse {
+    flex-direction: column-reverse;
+  }
+  .championship-titles {
+    flex-direction: column;
+  }
+  .title-group {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 960px) {
+  .f1-title {
+    font-size: 3rem;
+  }
+  .history-text p {
+    font-size: 1rem;
+  }
+  .f1-pilots-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .f1-pilots-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .pilot-info p {
+    font-size: 1rem;
+  }
+  .pilot-info h4 {
+    font-size: 1.4rem;
+  }
+  .f1-titles-section {
+    padding: 4rem 6rem;
+  }
 }
 @media screen and (max-width: 700px) {
+  .f1-subtitle {
+    font-size: 1.2rem;
+  }
+  .f1-section-title {
+    font-size: 2rem;
+  }
+  .f1-section-subtitle {
+    font-size: 1.2rem;
+  }
+  .history-year {
+    font-size: 3rem;
+  }
+  .history-text h3 {
+    font-size: 1.5rem;
+  }
+  .f1-history-section {
+    padding: 4rem 4rem 0 4rem;
+  }
+  .f1-pilots-section {
+    padding: 4rem 4rem;
+  }
+  .f1-titles-section {
+    padding: 4rem 4rem;
+  }
+  .f1-titles-title {
+    font-size: 2rem;
+  }
+  .f1-titles-subtitle {
+    font-size: 1.2rem;
+  }
+  .title-info h4 {
+    font-size: 1.2rem;
+  }
+  .title-info p {
+    font-size: 1rem;
+  }
+  .f1-iconic-cars-section {
+    padding: 4rem 4rem;
+  }
 }
 @media screen and (max-width: 500px) {
 }
