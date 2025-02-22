@@ -570,8 +570,6 @@ header.menu-open .menu-on-nav li a:hover {
   .phrase-hero h1 {
     font-size: 4rem;
   }
-
-  /* Disminuir el tamaño del stroke */
   .phrase-hero h1 .outline {
     -webkit-text-stroke-width: 2px;
   }
