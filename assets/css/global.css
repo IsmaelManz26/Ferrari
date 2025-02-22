@@ -34,7 +34,6 @@ body {
   background-color: var(--ferrari-black);
   color: var(--ferrari-white);
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 h1,
 h2,
