@@ -33,6 +33,7 @@ body {
   font-family: "Ferrari-Regular", sans-serif;
   background-color: var(--ferrari-black);
   color: var(--ferrari-white);
+  overflow-x: hidden;
 }
 h1,
 h2,

@@ -574,3 +574,15 @@ header.menu-open .menu-on-nav li a:hover {
     -webkit-text-stroke-width: 2px;
   }
 }
+.hero-content,
+.hero-image,
+.enzo-section,
+.timeline-section,
+.timeline-content,
+.collaboration-row,
+.collaboration-card,
+.drivers-grid,
+.driver-card {
+  max-width: 100%;
+  overflow: hidden;
+}
