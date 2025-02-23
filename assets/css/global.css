@@ -289,3 +289,29 @@ button {
     padding: 2rem 2rem;
   }
 }
+
+/* Asegúrate de que los contenedores no causen desbordamiento */
+.hero-section,
+.intro-section,
+.essence-section,
+.performance-section,
+.masonry-section,
+.news-section,
+.f1-intro-section,
+.f1-history-section,
+.f1-iconic-cars-section,
+.f1-pilots-section,
+.f1-titles-section,
+.f1-gallery,
+.map-section,
+.testimonials-section,
+.contact-section,
+.footer-section,
+.enzo-section,
+.timeline-section,
+.collaboration-card-slider,
+.legendary-drivers-section,
+.store-section,
+.faq-section {
+  overflow: hidden;
+}
